@@ -7,25 +7,25 @@
 // salvataggio elemnti DOM
 const buttonElement = document.querySelector("#number-random");
 
-// al click prende il numero inserito dall'utente e lo confronta con il numero
-// random scelto dal pc
+// al click prende il numero inserito dall'utente e lo confronta con il numero random scelto dal pc
 buttonElement.addEventListener('click',
 
     function(){
 
-        // chiediamo all'utente di scegliere un numero da 1 a 6
-        const inputUserNumberElement = document.querySelector("#user-number");
+        // chiediamo all'utente di generare un numero random da 1 a 6
+        const randomNumberUser = Math.floor(Math.random()*6 + 1);
+        console.log(randomNumberUser);
 
         // chiediamo al pc di generare un numero random da 1 a 6
-        var randomNumber = Math.floor(Math.random()*6 + 1);
-        console.log(randomNumber);
+        const randomNumberPc = Math.floor(Math.random()*6 + 1);
+        console.log(randomNumberPc);
 
 
         // se il numero scelto dall'utente è MINORE del numero scelto dal pc scrivi hai vinto
-        if (inputUserNumberElement.value > randomNumber){
+        if (randomNumberUser > randomNumberPc){
             console.log("hai vinto");
         // se il numero scelto dall'utente è MAGGIORE del numero scelto dal pc scrivi hai vinto
-        } else if (inputUserNumberElement.value < randomNumber){;
+        } else if (randomNumberUser < randomNumberPc){;
             console.log("hai perso");
             // se il numero scelto dall'utente è UGUALE del numero scelto dal pc scrivi avete pareggiato
         }else {

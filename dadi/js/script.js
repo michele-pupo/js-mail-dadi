@@ -14,22 +14,32 @@ buttonElement.addEventListener('click',
 
         // chiediamo all'utente di generare un numero random da 1 a 6
         const randomNumberUser = Math.floor(Math.random()*6 + 1);
-        console.log(randomNumberUser);
+        // console.log(randomNumberUser);
+
+        document.querySelector("#user-number").innerHTML = randomNumberUser;
 
         // chiediamo al pc di generare un numero random da 1 a 6
         const randomNumberPc = Math.floor(Math.random()*6 + 1);
-        console.log(randomNumberPc);
+        // console.log(randomNumberPc);
+
+        document.querySelector("#pc-number").innerHTML = randomNumberPc;
 
 
         // se il numero scelto dall'utente è MINORE del numero scelto dal pc scrivi hai vinto
         if (randomNumberUser > randomNumberPc){
-            console.log("hai vinto");
+            // console.log("hai vinto");
+
+            document.querySelector("#result").innerHTML = `HAI VINTO`;
         // se il numero scelto dall'utente è MAGGIORE del numero scelto dal pc scrivi hai vinto
         } else if (randomNumberUser < randomNumberPc){;
-            console.log("hai perso");
+            // console.log("hai perso");
+
+            document.querySelector("#result").innerHTML = `HAI PERSO`;
             // se il numero scelto dall'utente è UGUALE del numero scelto dal pc scrivi avete pareggiato
         }else {
-            console.log("avete pareggiato");
+            // console.log("avete pareggiato");
+
+            document.querySelector("#result").innerHTML = `AVETE PAREGGIATO`;
         };
     }
 );

@@ -18,8 +18,9 @@ buttonElement.addEventListener('click',
 
         // verifichiamo se l'utente può accedere
         const userEmailElement = document.querySelector("#user-email").value;
-        console.log(userEmailElement)
-        
+        // console.log(userEmailElement)
+
+
         // variabile iniziale in false
         let controlAccess = false;
 
@@ -44,6 +45,7 @@ buttonElement.addEventListener('click',
 );
 
 
+// secondo metodo senza l'uso del ciclo for
 
 // buttonElement.addEventListener('click',
 

@@ -17,14 +17,51 @@ buttonElement.addEventListener('click',
         // console.log(listEmails);
 
         // verifichiamo se l'utente può accedere
-        const userEmailElement = document.querySelector("#user-email");
+        const userEmailElement = document.querySelector("#user-email").value;
+        console.log(userEmailElement)
+        
+        // variabile iniziale in false
+        let controlAccess = false;
 
-            if (listEmails.indexOf(userEmailElement.value) > -1){
-                document.querySelector("#outcome").innerHTML = `Puoi accedere`;
+        for (let i = 0; i < listEmails.length; i++){
+            
+            if (listEmails[i] === userEmailElement) {
 
-            }else{
-                document.querySelector("#outcome").innerHTML = `Non puoi accedere`;
-
+                // se l'email è corretta la variabile si trasforma in true
+                controlAccess = true;
             }
+        } 
+
+        //stampo in pagina il risultato della verifica ottenuto tramite il ciclo for
+        if (controlAccess === false) {
+            console.log('Non puoi accedere');
+            document.querySelector("#outcome").innerHTML = `Email non presente nel sistema`;
+        } else {
+            console.log('Puoi accedere');
+            document.querySelector("#outcome").innerHTML = `Puoi accedere`;
         }
+        } 
 );
+
+
+
+// buttonElement.addEventListener('click',
+
+//         function(){
+
+//         // creo ARRAY lista di mail utenti che possono accedere
+//         const listEmails = ["mcikpupo@gmail.com","pupomic@hotmail.it","pumiche@tiscali.com","michelepu@yahoo.com","yanniksinner@gmail.com","boolean@hotmail.it","michelepupo@hotmail.it","ronaldo@yahoo.com"];
+//         // console.log(listEmails);
+
+//         // verifichiamo se l'utente può accedere
+//         const userEmailElement = document.querySelector("#user-email");
+
+//             if (listEmails.indexOf(userEmailElement.value) > -1){
+//                 document.querySelector("#outcome").innerHTML = `Puoi accedere`;
+
+//             }else{
+//                 document.querySelector("#outcome").innerHTML = `Non puoi accedere`;
+
+//             }
+//         }
+// );

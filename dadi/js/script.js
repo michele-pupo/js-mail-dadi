@@ -25,17 +25,17 @@ buttonElement.addEventListener('click',
         document.querySelector("#pc-number").innerHTML = randomNumberPc;
 
 
-        // se il numero scelto dall'utente è MINORE del numero scelto dal pc scrivi hai vinto
+        // se il numero generato dall'utente è MINORE del numero generato dal pc, scrivi hai vinto
         if (randomNumberUser > randomNumberPc){
             // console.log("hai vinto");
 
             document.querySelector("#result").innerHTML = `HAI VINTO`;
-        // se il numero scelto dall'utente è MAGGIORE del numero scelto dal pc scrivi hai vinto
+        // se il numero generato dall'utente è MAGGIORE del numero generato dal pc, scrivi hai vinto
         } else if (randomNumberUser < randomNumberPc){;
             // console.log("hai perso");
 
             document.querySelector("#result").innerHTML = `HAI PERSO`;
-            // se il numero scelto dall'utente è UGUALE del numero scelto dal pc scrivi avete pareggiato
+            // se il numero generato dall'utente è UGUALE del numero generato dal pc, scrivi avete pareggiato
         }else {
             // console.log("avete pareggiato");
 

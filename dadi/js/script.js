@@ -12,17 +12,24 @@ buttonElement.addEventListener('click',
 
     function(){
 
+        // cambio la visualizzazione della user-number dove vengono mostrati i dadi
+        document.querySelector(".user-number").style.display = "flex";
+        // cambio la visualizzazione della computer-number dove vengono mostrati i dadi
+        document.querySelector(".computer-number").style.display = "flex";
+
         // chiediamo all'utente di generare un numero random da 1 a 6
         const randomNumberUser = Math.floor(Math.random()*6 + 1);
         // console.log(randomNumberUser);
 
-        document.querySelector("#user-number").innerHTML = randomNumberUser;
+        // facciamo corrispondere il numero random generato al numero del dado
+        document.querySelector("#playerOutput img").src = `./img/${randomNumberUser}.png`;
 
         // chiediamo al pc di generare un numero random da 1 a 6
         const randomNumberPc = Math.floor(Math.random()*6 + 1);
         // console.log(randomNumberPc);
 
-        document.querySelector("#pc-number").innerHTML = randomNumberPc;
+        // facciamo corrispondere il numero random generato al numero del dado
+        document.querySelector("#computerOutput img").src = `./img/${randomNumberPc}.png`;
 
 
         // se il numero generato dall'utente è MINORE del numero generato dal pc, scrivi hai vinto
